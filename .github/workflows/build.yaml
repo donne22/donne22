@@ -1,0 +1,13 @@
+name: Test workflow
+on:
+  push:
+    branches: ['master']
+jobs:
+  test_docker:
+    name: test docker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: git@github.com:donne22/donne22.git
+      - uses: docker/build-push-action@v6.3.0
+        run: docker --version
+          
