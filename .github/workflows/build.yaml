@@ -7,6 +7,6 @@ jobs:
     name: test docker
     runs-on: ubuntu-latest
     steps:
-      - uses: git@github.com:donne22/donne22.git
+      - uses: actions/checkout@v4
       - name: testbuild
         run: ls -la
